@@ -1,5 +1,5 @@
 <div>
-  <% css_classes = "inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" %>
+  <% css_classes = "block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" %>
   <%- if controller_name != 'sessions' %>
     <%= link_to "Log in", new_session_path(resource_name), class: css_classes %>
   <% end %>
