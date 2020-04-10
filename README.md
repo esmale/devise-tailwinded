@@ -22,6 +22,8 @@ Or install it yourself as:
 
     $ gem install devise-tailwinded
 
+You will also need to have Tailwind CSS installed and set up in your application for this gem to have the desired effect.
+
 ## Contributing
 
 Bug reports and pull requests are welcome. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
