@@ -4,22 +4,17 @@
     <%= render "devise/shared/error_messages", resource: resource %>
     <%= f.hidden_field :reset_password_token %>
 
-    <%
-      label_classes = "block text-sm font-bold mb-2 #{alert ? "text-red-500" : "text-gray-700"}"
-      input_classes = "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline #{alert ? "border-red-500" : nil}"
-    %>
-
     <div class="mb-4">
-      <%= f.label :password, "New password", class: label_classes %>
+      <%= f.label :password, "New password", class: "block text-sm font-bold mb-2 text-gray-700" %>
       <% if @minimum_password_length %>
         <em class="block text-sm font-normal mb-2 text-gray-900">(<%= @minimum_password_length %> characters minimum)</em>
       <% end %>
-      <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: input_classes %>
+      <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
     </div>
 
     <div class="mb-4">
-      <%= f.label :password_confirmation, "Confirm new password", class: label_classes %>
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: input_classes %>
+      <%= f.label :password_confirmation, "Confirm new password", class: "block text-sm font-bold mb-2 text-gray-700" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
     </div>
 
     <div class="flex items-center justify-between content-end">

@@ -3,14 +3,9 @@
     <h2 class="text-center">Resend confirmation instructions</h2>
     <%= render "devise/shared/error_messages", resource: resource %>
 
-    <%
-      label_classes = "block text-sm font-bold mb-2 #{alert ? "text-red-500" : "text-gray-700"}"
-      input_classes = "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline #{alert ? "border-red-500" : nil}"
-    %>
-
     <div class="mb-4">
-      <%= f.label :email, "Email", class: label_classes  %>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: input_classes,
+      <%= f.label :email, "Email", class: "block text-sm font-bold mb-2 text-gray-700"  %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
                         value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
     </div>
 

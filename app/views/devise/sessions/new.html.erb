@@ -3,18 +3,14 @@
     <h2 class="text-center">Log in</h2>
     <%= render "devise/shared/error_messages", resource: resource %>
 
-    <%
-      label_classes = "block text-sm font-bold mb-2 #{alert ? "text-red-500" : "text-gray-700"}"
-      input_classes = "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline #{alert ? "border-red-500" : nil}"
-    %>
     <div class="mb-4">
-      <%= f.label :email, "Email", class: label_classes  %>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: input_classes %>
+      <%= f.label :email, "Email", class: "block text-sm font-bold mb-2 text-gray-700"  %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
     </div>
 
     <div class="mb-4">
-      <%= f.label :password, "Password", class: label_classes %>
-      <%= f.password_field :password, autocomplete: "current-password", class: input_classes %>
+      <%= f.label :password, "Password", class: "block text-sm font-bold mb-2 text-gray-700" %>
+      <%= f.password_field :password, autocomplete: "current-password", class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
     </div>
 
     <div class="flex items-center justify-between content-end">
